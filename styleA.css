@@ -8,7 +8,7 @@
 }
 :root {
   font-size: 62.5%;
-  background: #43535f;
+  background: #5e5970;
 }
 .hide {
   display: none;
@@ -27,7 +27,7 @@
 }
 
 .card-player {
-  background: linear-gradient(to left,#99a8b3, #4d5c66); 
+  background: linear-gradient(to left,#aca4cc, #7b7692);
   color: #fff;
   display: flex;
   flex-direction: column;

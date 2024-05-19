@@ -8,7 +8,7 @@
 }
 :root {
   font-size: 62.5%;
-  background: #43535f;
+  background: #0f0d13;
 }
 .hide {
   display: none;
@@ -21,13 +21,13 @@
 }
 
 .conteudo-musica img{
-  border-radius: 5px;
-  width: 300px; 
-  height: 300px;
+    border-radius: 5px;
+    width: 300px; 
+    height: 300px;
 }
 
 .card-player {
-  background: linear-gradient(to left,#99a8b3, #4d5c66); 
+  background: linear-gradient(to left,#9ca89c, #202220);
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -38,7 +38,7 @@
   margin: 20px 0px 15px 0px;
 }
 .desc-musica span {
-  color: #cdcbd1;
+  color: #9895a5;
 }
 .conteudo-musica p {
   font-size: 2.4rem;
@@ -61,6 +61,8 @@
 .container-progresso input {
   width: 100%;
 }
+
+
 .tempo-musica {
   margin-top: 10px;
   display: flex;
