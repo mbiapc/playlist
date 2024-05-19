@@ -1,17 +1,19 @@
-// chamdando variaveis
-const progressBar = document.getElementById("progressBar");
+// Método de áudio
+const music = new Audio("./assets/02. IVE - Accendio.mp3");
+
+// Chamando variáveis
+const progressBar = document.querySelector("#progressBar");
 const buttonPlay = document.querySelector('#play');
 const buttonPause = document.querySelector('#pause');
-const tempoAtual = document.getElementById("tempoAtual");
-const tempoTotal = document.getElementById("tempoTotal");
+const buttonVoltar = document.querySelector('#voltar');
+const buttonAvançar = document.querySelector('#avancar');
+const tempoAtual = document.querySelector("#tempoAtual");
+const tempoTotal = document.querySelector("#tempoTotal");
 
-// metodo de audio
-
-const music = new Audio('./assets/Pra-onde-eu-irei.mp3');
+// Método de áudio
 let interval;
 
-//funçoes
-
+// Funções
 function formatarTempo(segundos) {
   const min = Math.floor(segundos / 60);
   const seg = Math.floor(segundos % 60);
@@ -29,17 +31,29 @@ music.addEventListener('loadedmetadata', function () {
 });
 
 function play() {
-  buttonPlay.classList.add('hide');
-  buttonPause.classList.remove('hide');
-  music.play();
-  interval = setInterval(updateMusicTime, 1000);
-}
-
-function pause() {
-  buttonPlay.classList.remove('hide');
-  buttonPause.classList.add('hide');
-  music.pause();
-}
+    buttonPlay.classList.toggle('hide');
+    buttonPause.classList.toggle('hide');
+    music.play();
+    interval = setInterval(updateMusicTime, 1000);
+  }
+  
+  function pause() {
+    buttonPlay.classList.toggle('hide');
+    buttonPause.classList.toggle('hide');
+    music.pause();
+    clearInterval(interval);
+  }
 
 buttonPlay.addEventListener('click', play);
 buttonPause.addEventListener('click', pause);
+
+// Adicionando redirecionamento para página de música ao clicar em "avançar"
+buttonAvançar.addEventListener('click', () => {
+  window.location.href = 'indexR.html';
+});
+
+// Adicionando redirecionamento para página de música ao clicar em "voltar"
+buttonVoltar.addEventListener('click', () => {
+  window.location.href = 'indexS.html';
+});
+

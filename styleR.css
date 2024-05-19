@@ -58,6 +58,26 @@
   cursor: pointer;
 }
 
+#progressBar {
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px; /* altura da barra de progresso */
+  background: #fff; /* cor de fundo da barra de progresso */
+  outline: none;
+  border-radius: 4px; /* bordas arredondadas */
+}
+
+#progressBar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px; /* largura da bolinha */
+  height: 16px; /* altura da bolinha */
+    background: #0f0d13; /* cor da bolinha */
+    border-radius: 50%; /* torna a bolinha redonda */
+    cursor: pointer;
+  }
+  
 .container-progresso input {
   width: 100%;
 }
